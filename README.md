@@ -1,20 +1,168 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Tamil Nadu Business Assistant (Tamil–English AI Business Copilot)
 
-# Run and deploy your AI Studio app
+A prototype business assistant for small and medium producers in Tamil Nadu, Tamil–English bilingual, built around a sample **A2 cow ghee producer** (20 cows, 15L/day) near Tiruchirappalli. The platform helps with non‑production operations:
 
-This contains everything you need to run your app locally.
+- Customer Discovery  
+- Marketing & Lead Generation  
+- Inventory & Production  
+- Financial Management  
+- Customer Care & Retention  
+- Logistics & Delivery Analysis  
+- Compliance & Registrations (info + checklist)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1KI8D_CNhA5F46rMg4rrsMSddLHamEDBQ
+Designed as an **MVP (10‑phase prototype)**, with AI-driven automation and minimal manual input.
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 🎯 Problem
 
+Small and medium producers in Tamil Nadu struggle with:
+- Finding customers willing to pay a fair price
+- Running marketing, logistics, and bookkeeping on top of production
+- Understanding compliance (FSSAI, GST, local rules)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+This MVP is a **complete AI‑assisted toolkit** a small producer can use to:
+- Launch a structured business
+- Run daily operations
+- Start planning to scale — all in Tamil and English.
+
+---
+
+## 🧩 Features
+
+### 1. Onboarding & Automation Engine
+- Conversational onboarding about product, scale, budget, and goals
+- Auto‑generates personalised business roadmap (automation plan)
+- Tracks 3‑month milestones (e.g., double sales, 50 new customers)
+
+### 2. Customer Discovery (Module 1)
+- Auto‑identifies target segments:
+  - Urban premium consumers (Chennai, Coimbatore)
+  - Organic stores & B2B buyers
+  - Restaurants, sweet shops
+  - Corporate gifting clients
+- Calculates addressable market, revenue potential, and competition
+- Suggests 30–50 high‑probability leads
+
+### 3. Marketing & Lead Generation (Module 2)
+- WhatsApp Business campaign planner:
+  - Auto‑generates bilingual messages for retail/B2B
+  - Weekly broadcast schedule (Time recommendations: 2–5 PM on weekdays)
+- Instagram/Facebook content engine:
+  - 4 content pillars (story, health, BTS, testimonials)
+  - 30‑day calendar (3 posts/week suggested)
+- Lead inbox with:
+  - Source, city, type, interest, status
+
+### 4. Inventory & Production (Module 3)
+- Production tracker (daily milk → ghee, spillage, notes)
+- Conversion ratio monitor (helps flag quality issues)
+- Stock by:
+  - Batch age
+  - Pack size (250 ml, 500 ml, 1 L)
+  - Packaging materials (bottles, labels)
+- Smart reorder suggestions (e.g., “Bottles will run out in 6 days”)
+
+### 5. Financial Management (Module 4)
+- Snapshot of:
+  - Sales (by channel: local, city, B2B)
+  - Expenses (feed, labour, packaging, marketing, logistics)
+  - Profit & margin per litre
+- Cost‑per‑litre breakdown
+- Breakeven and “What‑if?” scenarios:
+  - Adjust price & volume sliders → see profit change
+- Simple monthly cash‑flow glimpse (opening, expected receipts, expected payments, closing cash)
+
+### 6. Customer Care & Retention (Module 5)
+- Unified inbox (WhatsApp, phone, store, online)
+- AI‑suggested replies (Tamil + English)
+- FAQ generator for common questions about A2 ghee, price, delivery, etc.
+- Feedback & ratings:
+  - 1–5 star ratings
+  - Auto‑highlighted complaints
+- Repeat‑order nudges:
+  - “Next expected order” dates
+  - Auto‑suggested reminder messages
+
+### 7. Logistics & Delivery (Module 6)
+- Distance‑based estimates:
+  - Trichy → Chennai (~330 km), Trichy → Coimbatore (~220 km)
+- Parcel cost ranges (within realistic ₹80–150 for small intra‑state parcels)
+- Per‑order & per‑litre delivery cost calculator
+- Batch‑shipping hints (lower cost per litre with consolidation)
+- Weekly dispatch planner (day, city, litres, mode)
+
+### 8. Compliance & Registrations (Module 7)
+- Informational guidance (not full automation):
+  - FSSAI registration/license (Basic/State for ghee unit)
+  - GST (threshold explanation)
+  - Shops & Establishments/Trade license (local rules)
+  - Packaged‑food labelling basics
+  - Udyam (MSME) registration overview
+- Practical checklists:
+  - Questions to ask a CA/consultant
+  - Documents to prepare for FSSAI
+  - Labelling checklist per bottle
+- Document & renewal reminder table (issue/expiry dates, storage location)
+
+### 9. Tamil–English UI System (Phase 9)
+- Global language toggle (top‑right: “தமிழ் / English”)
+- Centralised translation files (`en.ts` / `ta.ts`)
+- Reusable bilingual components:
+  - `SectionCard`, `StatCard`, `StatusBadge`, `ActionButton`
+- Demo‑ready:
+  - Clean typography (Tamil + Noto Sans Tamil)
+  - Consistent colours, icons, spacing
+
+### 10. Demo Mode / Pitch Flow (Phase 10)
+- One‑click “Start Demo (Ghee Producer)” button on dashboard
+- Pre‑loaded ghee producer profile:
+  - 20 cows, 15L/day, ₹450/L cost, ₹900–1000/L target
+  - Budget: ₹1,50,000, 3‑month goal: double sales
+- Guided side panel with 5–7 steps:
+  - Business setup → Customer Discovery → Marketing → Inventory → Finance → Logistics → Customer Care
+- Mini highlight tags on key slides for presenter (“Show this to explain customers / profit / logistics”)
+
+---
+
+## 🛠️ Tech Stack (Conceptual)
+
+This prototype is structured for flexibility; you can implement it in multiple ways:
+
+- **Frontend Framework**: React + TypeScript (component‑based)
+- **State**: Context API / Zustand
+- **Styling**: Tailwind CSS or similar utility‑first CSS
+- **AI Backend (Concept)**:
+  - Gemini API (for multilingual, Tamil‑aware responses)
+  - Vector + fine‑tuned product‑knowledge (Tamil‑origin ghee, Tamil Nadu markets)
+- **Data (MVP level)**:
+  - Local state + mock JSON for demo (no full DB yet)
+  - Structured for easy later migration to Firebase, PostgreSQL, etc.
+- **No‑code/AI‑studio friendly**:
+  - The UI and logic can be prototyped in Google AI Studio (exportable code) and then refined in VS Code / Cursor.
+
+---
+
+## 🧪 How to Use (Demo Flow)
+
+1. Open the app and go to **Dashboard**.
+2. Click **“Start Demo (Ghee Producer)”** (demo mode).
+3. Follow the **Demo Guide panel**:
+   - 1) Business Setup  
+   - 2) Customer Discovery  
+   - 3) Marketing & Leads  
+   - 4) Inventory & Production  
+   - 5) Financial Management  
+   - 6) Logistics  
+   - 7) Customer Care  
+4. Toggle between **தமிழ் / English** in the top‑right.
+5. Use various modules to show:
+   - How AI finds customers
+   - How marketing is planned
+   - How inventory, cost, and delivery shape profitability
+   - How compliance is explained in simple Tamil‑friendly language
+
+---
+
+## 📦 Folder Structure (Suggested)
+
