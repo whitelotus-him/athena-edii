@@ -1,4 +1,109 @@
-# Tamil Nadu Business Assistant (Tamil–English AI Business Copilot)
+
+
+text
+## 🖥 How to Run This App Locally
+
+This prototype is designed as a **React + TypeScript frontend** that can be run on your local computer with a simple Node.js setup.
+
+### 1. Prerequisites
+
+Before running the app, install:
+
+- [Node.js](https://nodejs.org) (recommended LTS version, e.g., 18.x or 20.x)
+- npm (comes bundled with Node.js)
+- A code editor (e.g., VS Code / Cursor)
+
+### 2. Clone or Download the Project
+
+If you’ve pushed this to GitHub:
+
+```bash
+git clone https://github.com/your-username/tamil-nadu-business-assistant.git
+cd tamil-nadu-business-assistant
+If you downloaded a ZIP:
+
+Extract the folder.
+
+Open a terminal inside that folder.
+
+3. Install Dependencies
+Run:
+
+bash
+npm install
+This installs all required packages (React, TypeScript, and any UI/UX libraries you used).
+
+4. Configure Environment (if any)
+If the app uses .env files (e.g., for API keys):
+
+Create .env.local in the root folder:
+
+bash
+# Example: Gemini API key (optional in MVP)
+VITE_GEMINI_API_KEY=your-api-key
+In MVP, this can be kept empty or dummy; most features are demo‑only.
+
+5. Start the Development Server
+Run:
+
+bash
+npm run dev
+or, if your project was created with create-react-app:
+
+bash
+npm start
+A dev server will start on http://localhost:5173 or http://localhost:3000 (shown in the terminal).
+
+Open that URL in your browser to see the app.
+
+6. Navigating the MVP Flow
+Once the app is running:
+
+Open the dashboard.
+
+Click “Start Demo (Ghee Producer)” to load the sample A2 ghee producer profile.
+
+Use the Demo Guide side panel to walk through:
+
+Customer Discovery
+
+Marketing & Leads
+
+Inventory & Production
+
+Financial Management
+
+Logistics
+
+Customer Care
+
+Toggle between தமிழ் / English in the top‑right corner to see bilingual UI.
+
+7. After Making Changes (optional)
+Save your code edits.
+
+The browser page will reload automatically (Hot Module Reload).
+
+When ready to build a production bundle:
+
+bash
+npm run build
+This creates a dist / build folder you can deploy later (e.g., on Netlify, Vercel, or GitHub Pages).
+
+8. Troubleshooting
+If you see command not found for npm:
+
+Reinstall Node.js and ensure it’s in your PATH.
+
+If styles or translations look broken:
+
+Check locales/en.ts / locales/ta.ts exist and are imported correctly.
+
+If a dependency is missing:
+
+Run npm install again.
+
+This app is MVP‑ready: it runs fully in the browser and uses local state (no backend required for demo).# Tamil Nadu Business Assistant (Tamil–English AI Business Copilot)
 
 A prototype business assistant for small and medium producers in Tamil Nadu, Tamil–English bilingual, built around a sample **A2 cow ghee producer** (20 cows, 15L/day) near Tiruchirappalli. The platform helps with non‑production operations:
 
@@ -164,5 +269,22 @@ This prototype is structured for flexibility; you can implement it in multiple w
 
 ---
 
-## 📦 Folder Structure (Suggested)
+---
+
+## 📌 Future Directions
+
+- Connect real WhatsApp / Instagram / courier APIs
+- Integrate with simple accounting tools (Tally‑like flows)
+- Add multi‑product support (spices, dairy, textiles)
+- Deeper automations (auto‑scheduling, auto‑reordering)
+- full backend + authentication for multiple producers
+
+---
+
+## 📄 License
+
+© 2026 Your Name / Team  
+This is a prototype for educational and competition use.  
+For production use, consult legal/finance professionals for compliance details.
+
 
